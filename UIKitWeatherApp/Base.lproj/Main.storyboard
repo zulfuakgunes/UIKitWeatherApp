@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p6g-jm-1ao">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="nXl-pq-uH7">
+            <objects>
+                <viewController id="p6g-jm-1ao" customClass="WeatherViewController" customModule="UIKitWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oIL-qP-hec">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exl-xP-0Eb">
+                                <rect key="frame" x="0.0" y="59" width="393" height="715"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RhX-P9-4k4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="krA-gX-DyR"/>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E34-8R-FAf">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u0T-AB-R8r"/>
+                                    <barButtonItem style="plain" id="eML-hC-3r3">
+                                        <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="Tzn-BZ-r60">
+                                            <rect key="frame" x="138.66666666666666" y="14" width="116" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </pageControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qbz-SU-G9O"/>
+                                    <barButtonItem systemItem="add" id="c2T-La-Fs9">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K3L-VF-lXK"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="exl-xP-0Eb" firstAttribute="leading" secondItem="K3L-VF-lXK" secondAttribute="leading" id="5tU-Hu-Puy"/>
+                            <constraint firstItem="E34-8R-FAf" firstAttribute="top" secondItem="exl-xP-0Eb" secondAttribute="bottom" id="Loe-bj-V2q"/>
+                            <constraint firstItem="exl-xP-0Eb" firstAttribute="trailing" secondItem="K3L-VF-lXK" secondAttribute="trailing" id="Rcm-MN-wur"/>
+                            <constraint firstItem="E34-8R-FAf" firstAttribute="trailing" secondItem="K3L-VF-lXK" secondAttribute="trailing" id="iRY-tj-0lg"/>
+                            <constraint firstItem="E34-8R-FAf" firstAttribute="leading" secondItem="K3L-VF-lXK" secondAttribute="leading" id="jwk-lC-hK7"/>
+                            <constraint firstItem="exl-xP-0Eb" firstAttribute="top" secondItem="K3L-VF-lXK" secondAttribute="top" id="n52-y9-MFD"/>
+                            <constraint firstItem="E34-8R-FAf" firstAttribute="bottom" secondItem="K3L-VF-lXK" secondAttribute="bottom" id="uLE-iZ-h6W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="E34-8R-FAf" id="yYc-EZ-DK6"/>
+                        <outlet property="scrollView" destination="exl-xP-0Eb" id="cWx-7l-FN3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMt-kY-gEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.045801526717554" y="-61.267605633802823"/>
+        </scene>
+    </scenes>
+</document>
